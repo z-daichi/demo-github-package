@@ -1,7 +1,7 @@
 "use client";
 
 import '../../index.css'
-import cat from './cat.png'
+import cat from '../../assets/cat.png'
 
 import { useState } from 'react';
 
