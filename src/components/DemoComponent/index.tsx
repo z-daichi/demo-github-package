@@ -1,6 +1,9 @@
 "use client";
-import { useState } from 'react';
+
+import '../../index.css'
 import cat from './cat.png'
+
+import { useState } from 'react';
 
 export const DemoComponent = () => {
     const [isShow, setIsShow] = useState(false);
