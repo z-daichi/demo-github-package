@@ -1,15 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
+import { resolve } from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(), libInjectCss()],
   build: {
     lib: {
       entry: 'src/index.ts',
-      name: 'demo-github-package',
-      fileName: (format) => `demo-github-package.${format}.js`
+      name: 'index',
+      fileName: (ext) => `index.${ext}.js`,
     },
     rollupOptions: {
       // 外部依存を指定
@@ -22,5 +24,6 @@ export default defineConfig({
         }
       }
     }
-  }
+  },
 })
+

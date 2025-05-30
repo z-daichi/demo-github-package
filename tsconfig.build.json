@@ -1,16 +1,19 @@
 {
-    "compilerOptions": {
-      "target": "ES2020",
-      "lib": ["ES2020", "DOM", "DOM.Iterable"],
-      "module": "ESNext",
-      "skipLibCheck": true,
-      "moduleResolution": "node",
-      "jsx": "react-jsx",
-      "strict": true,
-      "outDir": "dist",
-      "declaration": true,
-      "declarationDir": "dist",
-      "emitDeclarationOnly": false
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
     },
-    "include": ["src"]
-  }
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "strict": true
+  },
+  "include": ["src"]
+}
